@@ -32,11 +32,9 @@ const Navbar = () => {
         69pixels.
       </div>
 
-      {/* Desktop Nav */}
       <div
-        className={`hidden md:flex md:gap-6 lg:gap-10 text-sm font-bold items-center ${
-          scrolled ? "text-white" : "text-black"
-        } transition`}
+        className={`hidden md:flex md:gap-6 lg:gap-10 text-sm font-bold items-center ${scrolled ? "text-white" : "text-black"
+          } transition`}
       >
         {navItems.map((item) => (
           <a key={item.name} href={item.href}>
@@ -51,14 +49,12 @@ const Navbar = () => {
         Discuss your project
       </button>
 
-      {/* Mobile Icon */}
       <div className="md:hidden text-white">
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-white text-black flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
           {navItems.map((item) => (

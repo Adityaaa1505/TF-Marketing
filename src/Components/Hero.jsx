@@ -1,5 +1,5 @@
 import heroBg from "/Images/hero-bg.png";
-import workImg from "/Images/work-img.png";
+import workImg from "/Images/section-1.1.png";
 
 const Hero = () => {
     return (
