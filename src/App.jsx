@@ -4,6 +4,9 @@ import TeamSection from './Components/TeamSection';
 import Services from './Components/Services';
 import Appraoch from './Components/Appraoch';
 import MeetTeam from './Components/MeetTeam';
+import SecretIngredient from './Components/SecretIngredient';
+import Reviews from './Components/Reviews';
+import Footer from './Components/Footer';
 
 const App = () => {
   return (
@@ -14,6 +17,9 @@ const App = () => {
       <Services /> {/* Section-3 */}
       <Appraoch /> {/* Section-4 */}
       <MeetTeam /> {/* Section-5 */}
+      <SecretIngredient /> {/* Section-6 */}
+      <Reviews /> {/* Section-7 */}
+      <Footer /> 
     </div>
   );
 };

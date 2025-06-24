@@ -94,7 +94,7 @@ const MeetTeam = () => {
                 <FadeInSection>
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
                         <div className="flex-1 text-center sm:text-left">
-                            <div className="text-base sm:text-lg md:text-xl p-1">Startups active users</div>
+                            <div className="text-base sm:text-lg md:text-xl p-1">Active users</div>
                             <div className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold p-1">2M</div>
                         </div>
                         <div className="flex-1 text-center sm:text-left">
@@ -106,19 +106,21 @@ const MeetTeam = () => {
             </div>
 
             <div className="mt-20">
-                <div className="text-white text-3xl">They trust us</div>
-                <div className="grid grid-cols-3 gap-12 md:grid-cols-5 p-4 text-white text-3xl">
-                    <div>Lingvanex</div>
-                    <div>Lingvanex</div>
-                    <div>Lingvanex</div>
-                    <div>Lingvanex</div>
-                    <div>Lingvanex</div>
-                    <div>Lingvanex</div>
-                    <div>Lingvanex</div>
-                    <div>Lingvanex</div>
-                    <div>Lingvanex</div>
-                    <div>Lingvanex</div>
-                </div>
+                <FadeInSection>
+                    <div className="text-white text-3xl">They trust us</div>
+                    <div className="grid grid-cols-3 gap-12 md:grid-cols-5 p-4 text-white text-lg sm:text-2xl md:text-3xl">
+                        <div>Lingvanex</div>
+                        <div>Lingvanex</div>
+                        <div>Lingvanex</div>
+                        <div>Lingvanex</div>
+                        <div>Lingvanex</div>
+                        <div>Lingvanex</div>
+                        <div>Lingvanex</div>
+                        <div>Lingvanex</div>
+                        <div>Lingvanex</div>
+                        <div>Lingvanex</div>
+                    </div>
+                </FadeInSection>
             </div>
         </section>
     )
