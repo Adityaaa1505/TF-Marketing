@@ -1,5 +1,8 @@
 import FadeInSection from "../Animations/FadeInSection";
 
+import { IoIosCall, IoMdMail } from "react-icons/io";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
+
 const Footer = () => {
     return (
         <section className="bg-red-600 px-6 md:px-16 py-10 text-gray-400 text-left">
@@ -13,44 +16,47 @@ const Footer = () => {
                     </h1>
                 </div>
                 <div className="text-gray-900 text-center border-b-2 border-gray-900 flex flex-col sm:flex-row pb-10 justify-between items-center text-md sm:text-xl">
-                    <div>© 2017 — 69</div>
+                    <div>© 2025 — 26</div>
                     <div>
-                        <div className="pt-6">Limassol, Cyprus</div>
-                        <div className="">Warsaw, Poland</div>
+                        <div className="pt-6">Technical Council,</div>
+                        <div className="">NIT - Trichy</div>
                     </div>
                 </div>
             </FadeInSection>
 
-
             <FadeInSection>
                 <div className="text-gray-900 text-md sm:text-xl mx-auto max-w-7xl mt-16 px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-
-                    <div className="w-full md:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-y-6">
-                        <a href="#">Dribbble</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Clutch</a>
-                        <a href="#">Designrush</a>
-                        <a href="#">Facebook</a>
+                    <div className="w-full md:w-1/2 flex gap-x-12 text-4xl text-black items-center">
+                        <a
+                            href="https://www.instagram.com/tc_nitt/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:opacity-80 transition duration-300"
+                        >
+                            <FaInstagram />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/technical-council-nit-trichy/posts/?feedView=all"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:opacity-80 transition duration-300"
+                        >
+                            <FaLinkedin />
+                        </a>
                     </div>
 
                     <div className="hidden md:flex justify-center items-center">
                         <div className="w-px h-40 bg-black" />
                     </div>
 
-                    <div className="w-full md:w-1/2 flex flex-col justify-start gap-10 text-right">
-                        <div>
-                            <p>Contact us</p>
-                            <a href="#" className="underline hover:opacity-80">
-                                Calendly
-                            </a>
-                        </div>
-                        <div>
-                            <p>Request design</p>
-                            <a href="mailto:hello@69pixels.com" className="underline hover:opacity-80">
-                                hello@69pixels.com
-                            </a>
-                        </div>
+                    <div className="w-full md:w-1/2 hover:opacity-80 flex flex-col justify-start gap-1 text-right">
+                        <a className="underline flex justify-end items-center gap-1" href="mailto:client@example.com?subject=Welcome%20to%20Our%20Services&body=Hi%20there,%0D%0A%0D%0AThank%20you%20for%20reaching%20out.%20Please%20find%20below%20your%20welcome%20message:%0D%0A%0D%0A---%0D%0A[Your%20Template%20Content%20Here]%0D%0A---%0D%0A%0D%0ARegards,%0D%0AThe%20Team" target="_blank">
+                            <IoMdMail />
+                            technicalcouncil.nitt.work@gmail.com
+                        </a>
+                        <a href="#" className="flex justify-end items-center gap-1">
+                            <IoIosCall className="" />70477 79851 / 99407 42527
+                        </a>
                     </div>
                 </div>
             </FadeInSection>

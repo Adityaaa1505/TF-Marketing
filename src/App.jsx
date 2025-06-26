@@ -7,6 +7,7 @@ import MeetTeam from './Components/MeetTeam';
 import SecretIngredient from './Components/SecretIngredient';
 import Reviews from './Components/Reviews';
 import Footer from './Components/Footer';
+import Reach from './Components/Reach';
 
 const App = () => {
   return (
@@ -14,9 +15,10 @@ const App = () => {
       <Navbar />
       <Hero />
       <AboutUs id="aboutus" /> {/* Section-2 */}
+      <Reach id="reach"/> {/* Section-3  */}
       <Services /> {/* Section-3 */}
       <Appraoch /> {/* Section-4 */}
-      <MeetTeam id="reach"/> {/* Section-5 */}
+      <MeetTeam /> {/* Section-5 */}
       <SecretIngredient /> {/* Section-6 */}
       <Reviews /> {/* Section-7 */}
       <Footer /> 

@@ -56,54 +56,6 @@ const MeetTeam = () => {
                     </FadeInSection>
                 ))}
             </div>
-
-            <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 text-white px-4 md:px-8 py-16">
-                <FadeInSection>
-                    <div className="text-gray-400 px-2 text-sm sm:text-base md:text-lg lg:text-xl">Team</div>
-                </FadeInSection>
-                <FadeInSection>
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
-                        <div className="flex-1 text-center sm:text-left">
-                            <div className="text-base sm:text-lg md:text-xl p-1">Pixels</div>
-                            <div className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold p-1">13</div>
-                        </div>
-                        <div className="flex-1 text-center sm:text-left">
-                            <div className="text-base sm:text-lg md:text-xl p-1">Years on Market</div>
-                            <div className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold p-1">6</div>
-                        </div>
-                    </div>
-                </FadeInSection>
-                <FadeInSection>
-                    <div className="text-gray-400 px-2 text-sm sm:text-base md:text-lg lg:text-xl">Pre-seed, seed stage</div>
-                </FadeInSection>
-                <FadeInSection>
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
-                        <div className="flex-1 text-center sm:text-left">
-                            <div className="text-base sm:text-lg md:text-xl p-1">Products Launched</div>
-                            <div className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold p-1">33</div>
-                        </div>
-                        <div className="flex-1 text-center sm:text-left">
-                            <div className="text-base sm:text-lg md:text-xl p-1">Rounds closed</div>
-                            <div className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold p-1">26</div>
-                        </div>
-                    </div>
-                </FadeInSection>
-                <FadeInSection>
-                    <div className="text-gray-400 px-2 text-sm sm:text-base md:text-lg lg:text-xl">As for now</div>
-                </FadeInSection>
-                <FadeInSection>
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
-                        <div className="flex-1 text-center sm:text-left">
-                            <div className="text-base sm:text-lg md:text-xl p-1">Active users</div>
-                            <div className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold p-1">2M</div>
-                        </div>
-                        <div className="flex-1 text-center sm:text-left">
-                            <div className="text-base sm:text-lg md:text-xl p-1">Rounds total investment</div>
-                            <div className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold p-1">$8M</div>
-                        </div>
-                    </div>
-                </FadeInSection>
-            </div>
         </section>
     )
 }
