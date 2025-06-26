@@ -1,6 +1,6 @@
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
-import TeamSection from './Components/TeamSection';
+import AboutUs from './Components/AboutUs';
 import Services from './Components/Services';
 import Appraoch from './Components/Appraoch';
 import MeetTeam from './Components/MeetTeam';
@@ -13,10 +13,10 @@ const App = () => {
     <div className="relative min-h-screen overflow-hidden border-2">
       <Navbar />
       <Hero />
-      <TeamSection /> {/* Section-2 */}
+      <AboutUs id="aboutus" /> {/* Section-2 */}
       <Services /> {/* Section-3 */}
       <Appraoch /> {/* Section-4 */}
-      <MeetTeam /> {/* Section-5 */}
+      <MeetTeam id="reach"/> {/* Section-5 */}
       <SecretIngredient /> {/* Section-6 */}
       <Reviews /> {/* Section-7 */}
       <Footer /> 

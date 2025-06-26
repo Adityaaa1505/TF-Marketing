@@ -1,5 +1,6 @@
+import RotatingText from "./RotatingText";
+import CountdownTimer from "./CountdownTimer";
 import heroBg from "/Images/hero-bg.png";
-import workImg from "/Images/section-1.1.png";
 
 const Hero = () => {
     return (
@@ -13,23 +14,23 @@ const Hero = () => {
             }}
         >
             <div className="max-w-6xl mt-20">
-                <h1 className="text-6xl sm:text-7xl md:text-9xl font-bold text-black break-words">
-                    69pixels.
+                <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold text-black break-words">
+                    TransfiNITTe
                 </h1>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-6 text-black font-bold text-6xl sm:text-7xl md:text-8xl text-center">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-6 text-black font-bold text-4xl sm:text-6xl md:text-8xl text-center">
                     <span>for</span>
-                    <img src={workImg} alt="mockup" className="h-24 w-auto sm:h-28" />
-                    <span>Startups.</span>
+                    <div><RotatingText /></div>
                 </div>
 
                 <p className="mt-10 text-lg sm:text-xl font-medium text-black px-2 sm:px-0">
-                    Immediate Design Support for Your Product
+                    The Flagship Hackathon of NIT Trichy
                 </p>
 
-                <button className="mt-6 px-6 py-3 bg-black text-white rounded hover:opacity-90 text-lg">
-                    Learn more ↓
-                </button>
+                <CountdownTimer
+                    targetDate={new Date("2025-07-18T00:00:00")}
+                    finalText="JUL 18-20 2025"
+                />
             </div>
         </section>
     );

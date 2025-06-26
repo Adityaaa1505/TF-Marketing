@@ -104,24 +104,6 @@ const MeetTeam = () => {
                     </div>
                 </FadeInSection>
             </div>
-
-            <div className="mt-20">
-                <FadeInSection>
-                    <div className="text-white text-3xl">They trust us</div>
-                    <div className="grid grid-cols-3 gap-12 md:grid-cols-5 p-4 text-white text-lg sm:text-2xl md:text-3xl">
-                        <div>Lingvanex</div>
-                        <div>Lingvanex</div>
-                        <div>Lingvanex</div>
-                        <div>Lingvanex</div>
-                        <div>Lingvanex</div>
-                        <div>Lingvanex</div>
-                        <div>Lingvanex</div>
-                        <div>Lingvanex</div>
-                        <div>Lingvanex</div>
-                        <div>Lingvanex</div>
-                    </div>
-                </FadeInSection>
-            </div>
         </section>
     )
 }

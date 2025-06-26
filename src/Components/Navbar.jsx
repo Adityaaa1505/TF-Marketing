@@ -6,69 +6,90 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Services", href: "#services" },
-    { name: "Clients & Reviews", href: "#clients" },
-    { name: "Team", href: "#team" },
+    { name: "About Us", target: "aboutus" },
+    { name: "Reach", target: "reach" },
+    { name: "Reviews", target: "reviews" },
+    { name: "Team", target: "team" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       const heroHeight = document.getElementById("hero")?.offsetHeight || 0;
-      if (window.scrollY > heroHeight - 80) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > heroHeight - 80);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false);
+  };
+
   return (
-    <nav className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300">
-      <div className={`text-4xl font-bold ${scrolled ? "text-white" : "text-black"} transition`}>
-        69pixels.
+    <nav
+      className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300"
+      style={{ cursor: "default" }}
+    >
+      {/* Logo */}
+      <div
+        onClick={() => scrollToSection("hero")}
+        className={`text-4xl font-bold transition ${scrolled ? "text-white" : "text-black"
+          }`}
+        style={{ cursor: "pointer" }}
+      >
+        TransfiNITTe
       </div>
 
+      {/* Desktop Nav */}
       <div
-        className={`hidden md:flex md:gap-6 lg:gap-10 text-sm font-bold items-center ${scrolled ? "text-white" : "text-black"
-          } transition`}
+        className={`hidden md:flex md:gap-6 lg:gap-10 text-sm font-bold items-center transition ${scrolled ? "text-white" : "text-black"
+          }`}
       >
         {navItems.map((item) => (
-          <a key={item.name} href={item.href}>
+          <button
+            key={item.name}
+            onClick={() => scrollToSection(item.target)}
+            className="relative group transition cursor-pointer"
+          >
             {item.name}
-          </a>
+            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full" />
+          </button>
         ))}
       </div>
 
+      {/* Desktop Button */}
       <button
-        className={`hidden md:flex px-5 py-2 rounded hover:bg-black transition ${scrolled ? "text-black bg-white" : "text-white bg-[#1a1a1a]"}`}
+        className={`hidden md:flex px-5 py-2 rounded transition cursor-pointer ${scrolled ? "bg-white text-black" : "bg-black text-white"
+          } hover:bg-neutral-600 hover:text-white`}
       >
-        Discuss your project
+        Problem Statements →
       </button>
 
-      <div className="md:hidden text-white">
-        <button onClick={() => setIsOpen(!isOpen)}>
+      {/* Mobile Menu Icon */}
+      <div className={`md:hidden ${scrolled ? "text-white" : "text-black"}`}>
+        <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
       </div>
 
+      {/* Mobile Dropdown */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-white text-black flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
           {navItems.map((item) => (
-            <a
+            <button
               key={item.name}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-              className="text-base font-semibold"
+              onClick={() => scrollToSection(item.target)}
+              className="relative text-base font-semibold text-left w-full group cursor-pointer"
             >
               {item.name}
-            </a>
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full" />
+            </button>
           ))}
-          <button className="bg-[#1a1a1a] text-white px-4 py-2 rounded hover:bg-black transition">
-            Discuss your project
+          <button className="bg-black text-white px-4 py-2 rounded hover:bg-neutral-600 transition cursor-pointer">
+            Problem Statements →
           </button>
         </div>
       )}
