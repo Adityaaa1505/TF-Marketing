@@ -8,8 +8,8 @@ const Navbar = () => {
   const navItems = [
     { name: "About Us", target: "aboutus" },
     { name: "Reach", target: "reach" },
-    { name: "Reviews", target: "reviews" },
-    { name: "Team", target: "team" },
+    // { name: "Reviews", target: "reviews" },
+    // { name: "Team", target: "team" },
   ];
 
   useEffect(() => {
