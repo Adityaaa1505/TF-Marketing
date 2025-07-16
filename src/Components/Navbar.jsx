@@ -8,7 +8,7 @@ const Navbar = () => {
   const navItems = [
     { name: "About Us", target: "aboutus" },
     { name: "Reach", target: "reach" },
-    // { name: "Reviews", target: "reviews" },
+    { name: "Testimonials", target: "testimonials" }
     // { name: "Team", target: "team" },
   ];
 
@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300"
+      className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300 backdrop-blur-xs"
       style={{ cursor: "default" }}
     >
       {/* Logo */}

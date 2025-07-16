@@ -96,8 +96,6 @@ const Services = () => {
                         Go To Order →
                     </button>
                 </div>
-
-                <img src="/Images/section-3.1.png" alt="" />
             </FadeInSection>
         </div>
     );
