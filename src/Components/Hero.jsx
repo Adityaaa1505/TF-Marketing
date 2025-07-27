@@ -28,8 +28,8 @@ const Hero = () => {
                 </p>
 
                 <CountdownTimer
-                    targetDate={new Date("2025-07-18T00:00:00")}
-                    finalText="JUL 18-20 2025"
+                    targetDate={new Date("2025-10-17T00:00:00")}
+                    finalText="OCT 17-19 2025"
                 />
             </div>
         </section>

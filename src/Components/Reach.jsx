@@ -54,8 +54,18 @@ const Reach = () => {
                             <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold p-1">10K+</div>
                         </div>
                     </div>
+
                 </FadeInSection>
+
+
             </div>
+            <FadeInSection>
+                <div className="w-fit my-16 mx-auto">
+                    <div className="border-4 w-fit">
+                        <img src="/Images/TF_Goodies.png" className="" />
+                    </div>
+                </div>
+            </FadeInSection>
         </section>
     )
 }

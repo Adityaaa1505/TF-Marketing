@@ -1,10 +1,10 @@
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import AboutUs from './Components/AboutUs';
-import Services from './Components/Services';
-import Appraoch from './Components/Appraoch';
-import MeetTeam from './Components/MeetTeam';
-import SecretIngredient from './Components/SecretIngredient';
+import Services from './Components/Not Required/Services';
+import Appraoch from './Components/Not Required/Appraoch';
+import MeetTeam from './Components/Not Required/MeetTeam';
+import SecretIngredient from './Components/Not Required/SecretIngredient';
 import Reviews from './Components/Reviews';
 import Footer from './Components/Footer';
 import Reach from './Components/Reach';
@@ -21,7 +21,7 @@ const App = () => {
       {/* <MeetTeam /> */}
       {/* <SecretIngredient /> */}
       <Reviews id="testimonials" /> {/* Section-4 */}
-      <Footer /> 
+      <Footer/> 
     </div>
   );
 };

@@ -9,7 +9,6 @@ const Navbar = () => {
     { name: "About Us", target: "aboutus" },
     { name: "Reach", target: "reach" },
     { name: "Testimonials", target: "testimonials" }
-    // { name: "Team", target: "team" },
   ];
 
   useEffect(() => {

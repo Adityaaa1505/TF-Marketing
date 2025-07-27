@@ -16,11 +16,8 @@ const Footer = () => {
                 </div>
 
                 <div className="text-gray-900 text-center border-b-2 border-gray-900 pb-10 text-md sm:text-xl">
-                    <div>© 2025 — 26</div>
-                    <div className="pt-3">
-                        <div>Technical Council,</div>
-                        <div>NIT - Trichy</div>
-                    </div>
+                    <div>Technical Council,</div>
+                    <div>NIT - Trichy</div>
                 </div>
             </FadeInSection>
 

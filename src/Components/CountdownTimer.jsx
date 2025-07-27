@@ -24,7 +24,7 @@ const CountdownTimer = ({ targetDate, finalText }) => {
     const interval = setInterval(() => {
       updateDaysLeft();
       setShowCountdown((prev) => !prev);
-    }, 8000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [targetDate]);
