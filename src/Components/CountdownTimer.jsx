@@ -30,7 +30,7 @@ const CountdownTimer = ({ targetDate, finalText }) => {
   }, [targetDate]);
 
   return (
-    <div className="text-lg sm:text-xl font-medium text-black uppercase tracking-wide flex justify-center items-center">
+    <div className="text-lg sm:text-xl font-semibold text-black uppercase tracking-wide flex justify-center items-center">
       <AnimatePresence mode="wait" initial={false}>
         {showCountdown && !showFinalText && daysLeft !== null && (
           <motion.span

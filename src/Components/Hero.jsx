@@ -23,7 +23,7 @@ const Hero = () => {
                     <div><RotatingText /></div>
                 </div>
 
-                <p className="mt-10 text-lg sm:text-xl font-medium text-black px-2 sm:px-0">
+                <p className="mt-10 text-lg sm:text-xl font-semibold text-black px-2 sm:px-0">
                     The Flagship Hackathon of NIT Trichy
                 </p>
 

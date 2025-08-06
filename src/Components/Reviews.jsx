@@ -4,7 +4,7 @@ const Reviews = () => {
         <section id="testimonials" className='bg-black px-6 md:px-16 py-20 text-gray-400 text-left font-semibold'>
             <FadeInSection>
                 <div className="text-white text-3xl md:text-4xl lg:text-5xl mb-24">
-                    We can't say better than our participants.
+                    <span className="text-[rgb(161,163,165)]">We can't say better</span> than our participants.
                 </div>
             </FadeInSection>
 
