@@ -3,7 +3,7 @@ import FadeInSection from "../Animations/FadeInSection";
 import { useEffect, useState } from "react";
 
 const steps = [
-  { title: "01 Software", active: true },
+  { title: "01 Software", active: false },
   { title: "02 Hardware", active: false },
   { title: "03 Management", active: false },
   { title: "04 Entrepreneurship", active: false },
@@ -16,7 +16,7 @@ const AboutUs = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIdx((prev) => (prev + 1) % totalSlides);
-    }, 3000);
+    }, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -69,7 +69,7 @@ const AboutUs = () => {
 
       <div className="mt-20">
         <FadeInSection>
-          <div className="font-semibold text-white text-3xl md:text-4xl lg:text-5xl mb-12">They trust us</div>
+          <div className="font-semibold text-white text-3xl md:text-4xl lg:text-5xl mb-12"><span className="text-[rgb(161,163,165)]">They </span>trust us</div>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 px-4 text-white justify-items-center items-center text-5xl sm:text-7xl">
             <SiJbl className="hover:scale-110 transition-transform duration-300" />
             <SiYamahacorporation className="hover:scale-110 transition-transform duration-300" />

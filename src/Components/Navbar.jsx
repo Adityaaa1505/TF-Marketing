@@ -44,7 +44,7 @@ const Navbar = () => {
 
       {/* Desktop Nav */}
       <div
-        className={`hidden md:flex md:gap-6 lg:gap-10 text-sm font-bold items-center transition ${scrolled ? "text-white" : "text-black"
+        className={`hidden md:flex md:gap-6 lg:gap-10 md:text-md lg:text-lg font-bold items-center transition ${scrolled ? "text-white" : "text-black"
           }`}
       >
         {navItems.map((item) => (

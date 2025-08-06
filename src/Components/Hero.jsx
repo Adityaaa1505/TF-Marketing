@@ -14,7 +14,7 @@ const Hero = () => {
             }}
         >
             <div className="max-w-6xl mt-20">
-                <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold text-black break-words">
+                <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-black break-words">
                     TransfiNITTe
                 </h1>
 
