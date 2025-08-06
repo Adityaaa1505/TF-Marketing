@@ -1,21 +1,6 @@
-import { useEffect, useState } from "react";
+import { SiBoeing, SiBosch, SiGeeksforgeeks, SiJbl, SiMongodb, SiYamahacorporation } from "react-icons/si";
 import FadeInSection from "../Animations/FadeInSection";
-import {
-  SiBoeing,
-  SiBosch,
-  SiGeeksforgeeks,
-  SiJbl,
-  SiMongodb,
-  SiYamahacorporation,
-} from "react-icons/si";
-
-const images = [
-  "/Images/slideshow1/slideshow1.0.jpeg",
-  "/Images/slideshow1/slideshow1.1.jpeg",
-  "/Images/slideshow1/slideshow1.2.jpeg",
-  "/Images/slideshow1/slideshow1.3.jpeg",
-  "/Images/slideshow1/slideshow1.4.jpeg",
-];
+import { useEffect, useState } from "react";
 
 const steps = [
   { title: "01 Software", active: false },
@@ -25,11 +10,12 @@ const steps = [
 ];
 
 const AboutUs = () => {
+  const totalSlides = 5;
   const [idx, setIdx] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIdx((prev) => (prev + 1) % images.length);
+      setIdx((prev) => (prev + 1) % totalSlides);
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -43,13 +29,13 @@ const AboutUs = () => {
       </FadeInSection>
 
       <FadeInSection>
-        <div className="my-12 max-w-4xl mx-auto text-xl md:text-3xl text-[rgb(161,163,165)] font-semibold text-center flex flex-wrap justify-center">
+        <div className="my-12 max-w-4xl mx-auto text-xl md:text-3xl text-[rgb(161,163,165)] font-semibold text-center flex flex-wrap justify-center ">
           <span className="text-white font-bold whitespace-nowrap">4 Domains</span>
-          <span>,</span>
+          <span className="">,</span>
           <span className="text-white font-bold whitespace-nowrap ml-3">42 Hours</span>
-          <span>,</span>
+          <span className="">,</span>
           <span className="text-white font-bold whitespace-nowrap ml-3">100+ Teams</span>
-          <span>,</span>
+          <span className="">,</span>
           <span className="text-white font-bold whitespace-nowrap ml-3">Infinite Possibilities!</span>
         </div>
       </FadeInSection>
@@ -73,24 +59,17 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="w-full mt-12 flex justify-center">
-        {images.map((src, i) => (
+      <div className="w-fit my-16 mx-auto">
         <img
-          key={i}
-          src={src}
-          alt={`Slideshow ${i}`}
-          className={`absolute inset-0 w-full h-auto object-cover transition-opacity duration-700 ${
-            i === idx ? "opacity-100" : "opacity-0"
-          }`}
+          src={`/Images/slideshow1/slideshow1.${idx}.jpeg`}
+          alt={`Slideshow ${idx}`}
+          className="w-full h-auto object-cover transition-opacity duration-700"
         />
-      ))}
       </div>
 
       <div className="mt-20">
         <FadeInSection>
-          <div className="font-semibold text-white text-3xl md:text-4xl lg:text-5xl mb-12">
-            <span className="text-[rgb(161,163,165)]">They </span>trust us
-          </div>
+          <div className="font-semibold text-white text-3xl md:text-4xl lg:text-5xl mb-12">They trust us</div>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 px-4 text-white justify-items-center items-center text-5xl sm:text-7xl">
             <SiJbl className="hover:scale-110 transition-transform duration-300" />
             <SiYamahacorporation className="hover:scale-110 transition-transform duration-300" />
@@ -101,8 +80,10 @@ const AboutUs = () => {
           </div>
         </FadeInSection>
       </div>
+
     </section>
   );
 };
 
 export default AboutUs;
+
