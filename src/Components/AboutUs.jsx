@@ -22,18 +22,18 @@ const AboutUs = () => {
   const totalSlides = slides.length;
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      setIdx((prev) => (prev + 1) % totalSlides);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [totalSlides]);
+
+  useEffect(() => {
     slides.forEach((src) => {
       const img = new Image();
       img.src = src;
     });
   }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIdx((prev) => (prev + 1) % totalSlides);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [totalSlides]);
 
   return (
     <section id="aboutus" className="bg-black text-white px-6 md:px-16 py-20">
@@ -74,13 +74,19 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="w-fit my-16 mx-auto">
-        <img
-          src={slides[idx]}
-          alt={`Slideshow ${idx}`}
-          className="w-full h-auto object-cover transition-opacity duration-700"
-        />
+      <div className="relative w-full max-w-3xl h-[400px] mx-auto my-16 overflow-hidden">
+        {slides.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`Slideshow ${i}`}
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${idx === i ? "opacity-100 z-10" : "opacity-0 z-0"
+              }`}
+          />
+        ))}
       </div>
+
+
 
       <div className="mt-20">
         <FadeInSection>
