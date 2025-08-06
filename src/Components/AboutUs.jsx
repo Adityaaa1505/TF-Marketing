@@ -9,16 +9,31 @@ const steps = [
   { title: "04 Entrepreneurship", active: false },
 ];
 
+const slides = [
+  "/Images/slideshow1/slideshow1.0.jpeg",
+  "/Images/slideshow1/slideshow1.1.jpeg",
+  "/Images/slideshow1/slideshow1.2.jpeg",
+  "/Images/slideshow1/slideshow1.3.jpeg",
+  "/Images/slideshow1/slideshow1.4.jpeg",
+];
+
 const AboutUs = () => {
-  const totalSlides = 5;
   const [idx, setIdx] = useState(0);
+  const totalSlides = slides.length;
+
+  useEffect(() => {
+    slides.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIdx((prev) => (prev + 1) % totalSlides);
-    }, 1000);
+    }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [totalSlides]);
 
   return (
     <section id="aboutus" className="bg-black text-white px-6 md:px-16 py-20">
@@ -61,7 +76,7 @@ const AboutUs = () => {
 
       <div className="w-fit my-16 mx-auto">
         <img
-          src={`/Images/slideshow1/slideshow1.${idx}.jpeg`}
+          src={slides[idx]}
           alt={`Slideshow ${idx}`}
           className="w-full h-auto object-cover transition-opacity duration-700"
         />
